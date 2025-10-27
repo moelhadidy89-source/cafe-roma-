@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا - Café Roma</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>تواصل معنا</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="menu.html">القائمة</a></li>
+                <li><a href="product.html">المنتجات</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html" class="active">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h2>اطلب من Café Roma</h2>
+        <form id="orderForm">
+            <input type="text" placeholder="الاسم" required>
+            <input type="text" placeholder="الطلب" required>
+            <input type="number" placeholder="رقم الترابيزة" required>
+            <button type="submit">إرسال الطلب</button>
+        </form>
+
+        <p id="success-message" style="display:none; color:green; font-weight:bold; margin-top:15px;">
+            ✅ تم إرسال طلبك بنجاح! شكراً لتعاملك مع Café Roma.
+        </p>
+    </section>
+
+    <footer>
+        <div class="page-navigation">
+            <a href="about.html" class="prev-btn">← الصفحة السابقة</a>
+            <a href="index.html" class="next-btn">الصفحة التالية →</a>
+        </div>
+        
+        <p>© 2025 Café Roma</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById("orderForm");
+        const message = document.getElementById("success-message");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            form.reset(); 
+            message.style.display = "block"; 
+        });
+    </script>
+</body>
+</html>
